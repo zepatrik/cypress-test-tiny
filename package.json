@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Small project for quickly testing Cypress.io test runner",
   "scripts": {
+    "start": "concurrently --kill-others \"npx http-server -p 5008\" \"npm run cypress:open\"",
     "cypress:run": "cypress run",
     "cypress:open": "cypress open",
     "cypress:verify": "cypress verify",
@@ -15,10 +16,14 @@
   "license": "ISC",
   "devDependencies": {
     "commit-message-install": "1.10.1",
+    "concurrently": "^4.1.0",
+    "cypress": "^3.1.3",
+    "http-server": "^0.11.1",
     "ok-file": "1.4.0"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/cypress-io/cypress-test-tiny.git"
-  }
+  },
+  "dependencies": {}
 }
